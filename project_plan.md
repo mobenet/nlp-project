@@ -1,7 +1,7 @@
 # PROJECT PLAN | NLP Fake News Classifier
 
-## Phase 1: Data Loading and Exploration
 
+## Phase 1: Data Loading and Exploration
     1. Import necessary libraries
     2. Load/Read dataset/data.csv
     3. Initial data inspection:
