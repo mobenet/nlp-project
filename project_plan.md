@@ -40,8 +40,6 @@
         - Logistic Regression
         - Naive Bayes
         - Random Forest (choosen)
-        - Gradient Boosting (e.g. XGBoost)
-        - SVM
 
     2. Evaluation:
         - Accuracy
