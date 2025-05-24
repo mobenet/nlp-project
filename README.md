@@ -47,10 +47,11 @@ The script will:
     - Evaluation: Cross-Validation
 
 ## Results: 
+
 We use 5-fold cross-validation to evaluate the model’s ability to generalize.
     - Mean accuracy: e.g. 99.8%
     - Standard deviation: e.g. ± 0.0013
----
+
 
 ### Developed as part of the Ironhack Data Science program — NLP Challenge.
 Authors: Affiong Akpanisong & Mo Benet 
