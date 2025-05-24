@@ -6,6 +6,10 @@ The project includes preprocessing, feature engineering, model training with cro
 
 ---
 
+## Final Deliverables:
+- predictions_validation.csv
+- fake_news_nlp.ipynb
+
 ## Project Structure
 
 - dataset:  
