@@ -15,7 +15,7 @@ The project includes preprocessing, feature engineering, model training with cro
 - dataset:  
     * data.csv # Labeled dataset for training and validation
     * validation_data.csv # Unlabeled dataset to predict
-- models: 
+- results: 
     * predictions_validation.csv # Final predictions on validation data
     * predictions_validation_onlytext.csv # Final predictions on validation data with only text model
 - models: 
