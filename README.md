@@ -1,39 +1,50 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# Fake News Classifier - NLP Project
 
-# PROJECT | Natural Language Processing Challenge
+This repository contains a full Machine Learning pipeline to classify news as **real (1)** or **fake (0)** using Natural Language Processing (NLP) techniques, built entirely in Python.
 
-## Introduction
+The project includes preprocessing, feature engineering, model training with cross-validation, and prediction on unseen validation data.
 
-Learning how to process text is a skill required for Data Scientists/AI Engineers. 
+---
 
-In this project, you will put these skills into practice to identify whether a news headline is real or fake news.
+## Project Structure
 
-## Project Overview
+├── dataset/
+│ ├── data.csv # Labeled dataset for training and validation
+│ └── validation_data.csv # Unlabeled dataset to predict
+├── fake_news_script.py # Main Python script
+├── predictions_validation.csv # Final predictions on validation data
+├── random_forest_model.pkl # Saved trained model
+├── tfidf_vectorizer.pkl # Saved TF-IDF vectorizer
+├── README.md # Project description
+├── requirements.txt
+└── fake_news_nlp.ipynb # Jupyter Notebook step by step how-to
 
-In the file `dataset/data.csv`, you will find a dataset containing news articles with the following columns:
+## How to Run
 
-- **`label`**: 0 if the news is fake, 1 if the news is real.
-- **`title`**: The headline of the news article.
-- **`text`**: The full content of the article.
-- **`subject`**: The category or topic of the news.
-- **`date`**: The publication date of the article.
+1. **Install the dependencies:**
 
-Your goal is to build a classifier that is able to distinguish between the two.
+```bash
+pip install -r requirements.txt
+python fake_news_script.py 
+```
 
-Once you have a classifier built, then use it to predict the labels for `dataset/validation_data.csv`. Generate a new file
-where the label `2` has been replaced by `0` (fake) or `1` (real) according to your model. Please respect the original file format, 
-do not include extra columns, and respect the column separator. 
+The script will:
 
-Please ensure to split the `data.csv` into **training** and **test** datasets before using it for model training or evaluation.
+    - Preprocess the data (tokenize, remove stopwords, apply stemming)
+    - Combine title + text into a single feature
+    - Apply TF-IDF vectorization + One-Hot Encoding for subject
+    - Train a RandomForestClassifier
+    - Perform 5-fold cross-validation with visual output
+    - Save the model and vectorizer
+    - Predict on validation_data.csv and save results in predictions_validation.csv
+    - Evaluation: Cross-Validation
 
-## Guidance
+## Results: 
+We use 5-fold cross-validation to evaluate the model’s ability to generalize.
 
-Like in a real life scenario, you are able to make your own choices and text treatment.
-Use the techniques you have learned and the common packages to process this data and classify the text.
+    - Mean accuracy: e.g. 99.8%
+    - Standard deviation: e.g. ± 0.0012
+---
 
-## Deliverables
-
-1. **Python Code:** Provide well-documented Python code that conducts the analysis.
-2. **Predictions:** A csv file in the same format as `validation_data.csv` but with the predicted labels (0 or 1)
-3. **Accuracy estimation:** Provide the teacher with your estimation of how your model will perform.
-4. **Presentation:** You will present your model in a 10-minute presentation. Your teacher will provide further instructions.
+### Developed as part of the [Ironhack] Data Science program — NLP Challenge.
+Authors: Affiong Akpanisong & Mo Benet 
