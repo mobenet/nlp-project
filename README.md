@@ -8,16 +8,23 @@ The project includes preprocessing, feature engineering, model training with cro
 
 ## Project Structure
 
-- dataset/
- - data.csv # Labeled dataset for training and validation
- - validation_data.csv # Unlabeled dataset to predict
+- dataset:  
+    * data.csv # Labeled dataset for training and validation
+    * validation_data.csv # Unlabeled dataset to predict
+- models: 
+    * predictions_validation.csv # Final predictions on validation data
+    * predictions_validation_onlytext.csv # Final predictions on validation data with only text model
+- models: 
+    * random_forest_model.pkl # Saved trained model
+    * tfidf_vectorizer.pkl # Saved TF-IDF vectorizer
+    * random_forest_model_onlytext.pkl # Saved trained model with only text as a feature
+    * tfidf_vectorizer_onlytext.pkl # Saved TF-IDF vectorizer with only text as a feature
 - fake_news_script.py # Main Python script
-- predictions_validation.csv # Final predictions on validation data
-- random_forest_model.pkl # Saved trained model
-- tfidf_vectorizer.pkl # Saved TF-IDF vectorizer
+- fake_news_nlp.ipynb # Jupyter Notebook step by step how-to process to train the model
+- only_text_nlp_model.ipynb # Jupyter Notebook training a new model using only text as feature
 - README.md # Project description
 - requirements.txt
-- fake_news_nlp.ipynb # Jupyter Notebook step by step how-to
+- first_steps_data_exploration.ipynb # Jupyter Notebook with the first steps we took exploring the data
 
 ## How to Run
 
@@ -41,10 +48,9 @@ The script will:
 
 ## Results: 
 We use 5-fold cross-validation to evaluate the model’s ability to generalize.
-
     - Mean accuracy: e.g. 99.8%
-    - Standard deviation: e.g. ± 0.0012
+    - Standard deviation: e.g. ± 0.0013
 ---
 
-### Developed as part of the [Ironhack] Data Science program — NLP Challenge.
+### Developed as part of the Ironhack Data Science program — NLP Challenge.
 Authors: Affiong Akpanisong & Mo Benet 
