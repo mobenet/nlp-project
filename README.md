@@ -1,4 +1,5 @@
 # Fake News Classifier - NLP Project
+Final Submission
 
 This repository contains a full Machine Learning pipeline to classify news as **real (1)** or **fake (0)** using Natural Language Processing (NLP) techniques, built entirely in Python.
 
